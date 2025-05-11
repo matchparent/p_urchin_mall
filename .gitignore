@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtualenv
+venv/
+env/
+ENV/
+*.env
+*.venv
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+
+# Django static/media
+staticfiles/
+media/
+
+# VSCode, PyCharm 等 IDE 文件
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.env
+.env.*
+
+# Migrations — 可选（如果你在团队协作中，建议保留）
+# */migrations/
+# !*/migrations/__init__.py
