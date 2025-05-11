@@ -1,3 +1,5 @@
+import os
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
@@ -12,11 +14,9 @@ DATABASES = {
     }
 }
 
-IMAGE_URL = "http://192.168.2.125:8000/static/product_images/"
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+BASE_URL = "http://192.168.2.125:8000"
 
-ALIPAY_APPID = "2021000148636567"
-
-# async receiving url, post
-APP_NOTIFY_URL = "http://192.168.2.125:8000/alipay/return"
-# sync receiving url, e.i. page after payment settled, get
-APP_RETURN_URL = "http://192.168.2.125:8000/alipay/return"
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.2.125']

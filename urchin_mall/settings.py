@@ -26,9 +26,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-p9gt%eo9&ckzx8$1epi0v2btui9%ug_tfp$=cn05n0z)qy8-ac"
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -66,9 +63,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "urchin_mall.urls"
-
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.2.125']
 
 TEMPLATES = [
     {
@@ -175,3 +169,13 @@ if CURRENT_ENV == "dev":
     from .settings_dev import *
 elif CURRENT_ENV == "prod":
     from .settings_prod import *
+
+
+IMAGE_URL = os.path.join(BASE_URL, "/static/product_images/")
+
+ALIPAY_APPID = "2021000148636567"
+
+# async receiving url, post
+APP_NOTIFY_URL = os.path.join(BASE_URL, "/alipay/return")
+# sync receiving url, e.i. page after payment settled, get
+APP_RETURN_URL = os.path.join(BASE_URL, "/alipay/return")

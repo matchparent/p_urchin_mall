@@ -1,10 +1,12 @@
+import os
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "urchin_mall",
-        "USER": "sqljohn",
-        "PASSWORD": "123",
-        "HOST": "127.0.0.1",
+        "USER": "admin",
+        "PASSWORD": "asdf1234",
+        "HOST": "db-urchin-mall.ckxk6o6mm5y3.us-east-1.rds.amazonaws.com",
         "PORT": "3306",
         # "OPTIONS": {"charset": "utf8mb4"},
         # "TEST": {"CHARSET": "utf8mb4"},
@@ -12,11 +14,9 @@ DATABASES = {
     }
 }
 
-IMAGE_URL = "http://192.168.2.125:8000/static/product_images/"
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+BASE_URL = "http://3.95.181.121:8000"
 
-ALIPAY_APPID = "2021000148636567"
-
-# async receiving url, post
-APP_NOTIFY_URL = "http://192.168.2.125:8000/alipay/return"
-# sync receiving url, e.i. page after payment settled, get
-APP_RETURN_URL = "http://192.168.2.125:8000/alipay/return"
+ALLOWED_HOSTS = ['3.95.181.121']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.2.125']
