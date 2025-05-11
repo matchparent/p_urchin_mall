@@ -163,7 +163,7 @@ KPU_ALI = os.path.join(BASE_DIR, "um_pay/keys/public_ali.txt")
 #
 ALI_DEBUG = True
 
-CURRENT_ENV = "dev"
+CURRENT_ENV = "prod"
 # CURRENT_ENV = os.getenv("CURRENT_ENV", "dev")
 if CURRENT_ENV == "dev":
     from .settings_dev import *
