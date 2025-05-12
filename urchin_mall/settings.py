@@ -163,19 +163,10 @@ KPU_ALI = os.path.join(BASE_DIR, "um_pay/keys/public_ali.txt")
 #
 ALI_DEBUG = True
 
-CURRENT_ENV = "prod"
+CURRENT_ENV = "dev"
 # CURRENT_ENV = os.getenv("CURRENT_ENV", "dev")
 if CURRENT_ENV == "dev":
     from .settings_dev import *
 elif CURRENT_ENV == "prod":
     from .settings_prod import *
 
-
-IMAGE_URL = os.path.join(BASE_URL, "/static/product_images/")
-
-ALIPAY_APPID = "2021000148636567"
-
-# async receiving url, post
-APP_NOTIFY_URL = os.path.join(BASE_URL, "/alipay/return")
-# sync receiving url, e.i. page after payment settled, get
-APP_RETURN_URL = os.path.join(BASE_URL, "/alipay/return")

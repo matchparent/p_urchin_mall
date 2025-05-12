@@ -8,6 +8,7 @@ from um_comment.models import Comment
 from utils.UmResponse import UmResponse
 from copy import deepcopy
 from utils.Encoders import DecimalEncoder
+from urchin_mall.settings import IMAGE_URL
 
 PageCount = 20
 
@@ -37,7 +38,7 @@ class CommodityFlashSaleAPIView(APIView):
         result = deepcopy(rst.data)
         for item in result:
             if 'image' in item and isinstance(item['image'], str):
-                item['image'] = item['image'].replace('http://127.0.0.1:8000', 'http://192.168.2.125:8000')
+                item['image'] = item['image'].replace('http://127.0.0.1:8000', IMAGE_URL)
 
         return UmResponse.gen(UmResponse.status_200, result)
 

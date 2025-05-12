@@ -20,3 +20,12 @@ BASE_URL = "http://192.168.2.125:8000"
 
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.2.125']
+
+IMAGE_URL = BASE_URL + "/static/product_images/"
+
+ALIPAY_APPID = "2021000148636567"
+
+# async receiving url, post
+APP_NOTIFY_URL = BASE_URL + "/alipay/return"
+# sync receiving url, e.i. page after payment settled, get
+APP_RETURN_URL = BASE_URL + "/alipay/return"
