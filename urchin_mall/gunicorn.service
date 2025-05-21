@@ -1,0 +1,16 @@
+# /etc/systemd/system/myproject.service
+[Unit]
+Description=Gunicorn daemon for Django
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/Users/bianjiang/Desktop/projects/p_urchin_mall
+ExecStart=/Users/bianjiang/Desktop/projects/p_urchin_mall/.venv/bin/gunicorn p_urchin_mall.wsgi:application \
+          --bind 127.0.0.1:8000 \
+          --workers 3
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
