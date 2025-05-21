@@ -3,11 +3,11 @@ import os
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "urchin_mall",
-        "USER": "admin",
-        "PASSWORD": "asdf1234",
-        "HOST": "db-urchin-mall.ckxk6o6mm5y3.us-east-1.rds.amazonaws.com",
-        "PORT": "3306",
+        "NAME": "railway",
+        "USER": "root",
+        "PASSWORD": "hEKMpRbVgZXrxSllGxORlauPzJXRawOD",
+        "HOST": "gondola.proxy.rlwy.net",
+        "PORT": "37109",
         # "OPTIONS": {"charset": "utf8mb4"},
         # "TEST": {"CHARSET": "utf8mb4"},
         # "init_command": "SET sql_mode='STRICT_TRANS_TABLES'"
