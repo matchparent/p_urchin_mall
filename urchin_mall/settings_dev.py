@@ -17,6 +17,7 @@ DATABASES = {
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 BASE_URL = "http://192.168.2.125:8000"
+URL_MALL = "http://192.168.2.125:8080"
 
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.2.125']

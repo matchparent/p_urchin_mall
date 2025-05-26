@@ -18,6 +18,7 @@ DATABASES = {
 DEBUG = True
 # BASE_URL = "http://3.95.181.121"
 BASE_URL = "https://api.urchin.website"
+URL_MALL = "https://mall.urchin.website"
 
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['3.95.181.121']
