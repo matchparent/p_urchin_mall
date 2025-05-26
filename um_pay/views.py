@@ -7,10 +7,16 @@ from rest_framework.views import APIView
 from um_order.models import Order
 from um_pay.alipay import AliPay
 
+from urchin_mall.settings import BASE_URL
+
 
 # pip install pycryptodome
 
 class PayAPIView(APIView):
+
+    def update(self,request):
+        Order.objects.filter(trade_no=request["out_trade_no"]).update(pay_status=2, ali_trade_no="asdf1234", pay_time=datetime.now())
+        return JsonResponse({"status": 200, "data": "success"})
 
     def post(self, request):
         alipay = AliPay()
@@ -33,7 +39,7 @@ class PayReturnAPIView(APIView):
         if alipay.verify(dic_rd, sign):
             Order.objects.filter(trade_no=dic_rd["out_trade_no"]).update(pay_status=2, ali_trade_no=dic_rd["trade_no"],
                                                                          pay_time=datetime.now())
-            return redirect("http://192.168.2.125:8080/profile/?activeIndex=3")
+            return redirect(BASE_URL+"/profile/?activeIndex=3")
         else:
             return JsonResponse({"status": 500, "data": "fail"})
 
