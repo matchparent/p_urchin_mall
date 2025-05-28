@@ -86,20 +86,6 @@ WSGI_APPLICATION = "urchin_mall.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.mysql",
-#         "NAME": "urchin_mall",
-#         "USER": "sqljohn",
-#         "PASSWORD": "123",
-#         "HOST": "127.0.0.1",
-#         "PORT": "3306",
-#         # "OPTIONS": {"charset": "utf8mb4"},
-#         # "TEST": {"CHARSET": "utf8mb4"},
-#         # "init_command": "SET sql_mode='STRICT_TRANS_TABLES'"
-#     }
-# }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -153,15 +139,9 @@ REST_FRAMEWORK = {
     # "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
 }
 
-# ALIPAY_APPID = "2021000148636567"
 KPR_APP = os.path.join(BASE_DIR, "um_pay/keys/private_app.txt")
 KPU_ALI = os.path.join(BASE_DIR, "um_pay/keys/public_ali.txt")
-#
-# # async receiving url, post
-# APP_NOTIFY_URL = "http://192.168.2.125:8000/alipay/return"
-# # sync receiving url, e.i. page after payment settled, get
-# APP_RETURN_URL = "http://192.168.2.125:8000/alipay/return"
-#
+
 ALI_DEBUG = True
 
 CURRENT_ENV = "prod"
